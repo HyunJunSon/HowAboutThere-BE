@@ -18,6 +18,6 @@ spring:
           enabled: true
           model: anthropic.claude-3-5-sonnet-20240620-v1:0
           options:
-            max-tokens: 1500
+            max-tokens: 10000
 
 

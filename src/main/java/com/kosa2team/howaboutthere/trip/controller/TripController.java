@@ -8,11 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/trip")
+@RequestMapping("/api")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TripController {
     private final TripService tripService;
 
+    @GetMapping()
+    public String health(){
+        return "OK";
+    }
 
     @PostMapping("/theme")
     public ResponseEntity<List<ThemeDto>> generateThema(@RequestBody TripInfoDto dto){

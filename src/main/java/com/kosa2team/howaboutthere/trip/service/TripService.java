@@ -90,6 +90,7 @@ public class TripService {
         Map<String, Object> map = new HashMap<>();
         map.put("startDate", dto.startDate());
         map.put("endDate", dto.endDate());
+        map.put("budget", dto.budget());
         List<String> spots = new ArrayList<>();
         for (SpotInfoDto spotsList : dto.touristspots()) {
             spots.add(spotsList.spotname());
